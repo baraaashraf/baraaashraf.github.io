@@ -5,7 +5,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body, html{
     background-color: #f4ebdc;
     overflow-x: hidden;
 }
@@ -197,12 +197,31 @@ header{
     padding: 30px;
     display: inline;
     font-weight: 600;
-} 
+}
 
 .hero-icon{
     color: #254856;
     padding:10px 25px;
     font-size: 36px;
+    transition: color 0.5s ease-in-out;
+}
+.fa-html5{
+    color: #ff5733;
+}
+.fa-css3-alt{
+    color: #264de4;
+}
+.fa-bootstrap{
+    color: #7532fa;
+}
+.fa-square-js{
+    color: #efd81d;
+}
+.fa-python{
+    color:
+}
+.fa-java{
+    color: #6db2d9;
 }
 .hero-stack{
     color: #0b1423;
@@ -214,7 +233,8 @@ header{
         width: 80%;
         display: block;
         margin:auto;
-        padding-top: 100px;
+        padding-top: 50px;
+
     }
 
     .hero-image{
@@ -242,7 +262,9 @@ header{
     }
     .tech-stack{
         padding: 20px;
-        margin: 20px;
+        margin: 0px;
+        width: 100%;
+        box-shadow: none;
     }
     .tech-stack p{
         display: none;
@@ -250,7 +272,7 @@ header{
     }
 
     .tech-stack i{
-        padding: 10px;
+        padding: 5px;
     }
 
 
@@ -306,8 +328,7 @@ header{
 
 .content-section .about-social{
     margin:40px 40px;
-    margin-bottom: 40px;
-    
+
 }
 
 .content-section .about-social i{
@@ -329,7 +350,9 @@ header{
         margin:auto;
         padding-top: 100px;
     }
-
+    .about-container{
+        padding-top: 70px;
+    }
     .content-section{
         float:none;
         width: 100%;
@@ -349,8 +372,12 @@ header{
     .content-section {
         text-align: center;
     }
+    .content-section .about-social{
+        margin:40px 0px;
+    }    
     .content-section .about-title{
         text-align: center;
+
     }
     
 }
@@ -365,12 +392,16 @@ header{
 .project-title{
     padding-top: 30px;
     padding: 10px;
-    letter-spacing: 2px;
     font-weight: 800;
-    font-size: 1.5rem;
     color: #254856;
     margin: 40px 0 40px 0;
+}
+.project-title h1{
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 2.5rem;
     text-transform: uppercase;
+
 }
 .projects-container{
     width: 70%;
@@ -491,7 +522,7 @@ header{
     .project-card{
         box-shadow: 0 0 10px rgba(0,0,0,.15); 
         width: 100%;
-        height: 75vh;
+        min-height: 95vh;
         border-radius: 20px;
         margin: 30px 10px;
         display: flex; 
@@ -509,6 +540,17 @@ header{
     }
     
     
+}
+@media screen and (max-width:400px){
+    .project-card{
+        box-shadow: 0 0 10px rgba(0,0,0,.15); 
+        width: 100%;
+        min-height: 115vh;
+        border-radius: 20px;
+        margin: 30px 10px;
+        display: flex; 
+        flex-direction: column;
+    }
 }
 
 /* Contact section */
@@ -570,10 +612,19 @@ button a{
 }
 
 @media screen and (max-width:768px){
+    .contact-text{
+        text-align: center;
+    }
+    .contact-buttons{
+        flex-direction: column;
+        margin-bottom: 5px;
+
+        
+    }
     .contact-buttons button{
-        border-radius: 50px;
+        border-radius: 20px;
         margin: 20px 10px;
-        padding: 8px 25px;
+        padding: 15px 25px;
         background-color: #f4ebdc;
         border-style: none;
     }
